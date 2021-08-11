@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Georama', sans-serif;
-    color: #fff;
+    color: #222;
     text-align: center;
     letter-spacing: .1rem;
 }
@@ -25,13 +25,12 @@ main {
     margin: 1rem auto;
 }
 
-h2 {
-    font-size: 2rem;
+h1 {
+    color: #fff;
 }
 
-section {
-    color: #222;
-    background-color: #fff;
+h2 {
+    font-size: 2rem;
 }
 
 section p {
@@ -47,7 +46,6 @@ footer {
 }
 
 .banner {
-    width: 100%;
     height: 50px;
     background-image: linear-gradient(90deg, #DB3069, #1EA896);
     box-shadow: 4px 4px 6px#222;
@@ -86,21 +84,32 @@ label {
     margin: 1rem 0;
 }
 
-input:focus {
+input {
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+input::placeholder {
+    text-align: left;
+}
+
+input[required]::placeholder {
+    text-align: right;
+}
+
+.contact-info input:hover,
+.contact-info input:focus,
+select:hover,
+select:focus {
     outline: none !important;
     background-color: #8447FF !important;
     color: #fff;
-    box-shadow: 0 0 10px 5px #222;
-}
-
-input[type="submit"] {
-    width: 100%;
 }
 
 .contact-info,
 .newsletter {
     text-align: left;
-    background: rgba(34, 34, 34, .9);
+    background: #222;
     padding: 1rem;
     color: #fff;
 }
@@ -132,41 +141,44 @@ select {
 select {
     height: 3.5rem;
     cursor: pointer;
-}
-select:focus {
-    background-color:  #8447FF;
-    color: #fff;
-}
-
-::placeholder {
-    text-align: right;
-    font-size: initial;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
 .newsletter input {
     margin-right: 10px;
 }
-#javascript-news, #plain-text {
+
+.newsletter label {
+    transition: all .3s;
+}
+
+.newsletter label:hover,
+.newsletter label:focus {
+    color: #8447FF;
+}
+
+#javascript-news, 
+#plain-text,
+textarea {
     margin-bottom: 2rem;
 }
 
 textarea {
     background-color: #F4F5F6;
-    margin-bottom: 2rem;
     padding: 1rem;
     border: solid 3px #1EA896;
     outline: none;
-}
-textarea::placeholder {
-    text-align: left;
+    transition: all .3s;
 }
 
-textarea:focus {
+textarea:focus,
+textarea:hover {
     border: solid 5px #8447FF;
-    box-shadow: 0 0 10px 10px #222222;
 }
 
 input[type="submit"] {
+    width: 100%;
     height: 70px;
     margin: 1rem auto;
     background-color: #1EA896;
@@ -187,9 +199,6 @@ input[type="submit"]:hover {
 
 @media screen and (min-width: 768px) {
     
-    body {
-        background: url(html-img.png);
-    }
     main {
         width: 50%;
     }
@@ -206,6 +215,6 @@ input[type="submit"]:hover {
         margin-bottom: 1rem;
     }
     .contact-info input:last-child {
-        width: 18.75%;
+        width: 25%;
     }
 }

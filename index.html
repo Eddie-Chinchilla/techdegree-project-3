@@ -32,13 +32,13 @@
                 <input type="email" id="email" name="user-email" placeholder="Required" required>
 
                 <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="user-phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                <input type="tel" id="phone-number" name="user-phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="555-555-5555">
 
                 <label for="address">Street Address</label>
-                <input type="text" id="address" name="user-address">
+                <input type="text" id="address" name="user-address" placeholder="10 Elm St">
 
                 <label for="city">City</label>
-                <input type="text" id="city" name="user-city">
+                <input type="text" id="city" name="user-city" placeholder="Springfield">
 
                 <label for="state">State</label>
                 <select id="state" name="user-state">
@@ -97,7 +97,7 @@
                   </select>
 
                   <label for="zip-code">Zip Code</label>
-                  <input type="text" id="zip-code" name="user-zip-code" size="5" maxlength="5" pattern="[0-9]*">
+                  <input type="text" id="zip-code" name="user-zip-code" size="5" maxlength="5" pattern="[0-9]*" placeholder="12345">
             </fieldset>
             
             <fieldset class="newsletter newsletter-bg">
@@ -109,7 +109,7 @@
                 <label for="javascript-news"><input type="checkbox" id="javascript-news" name="newsletter" value="javascript-news">JavaScript News</label>
                 
                 <p>Newsletter Format</p>
-                <label for="html"><input type="radio" id="html" name="format-type" value="html" checked>HTML</label>
+                <label for="html"><input type="radio" id="html" name="format-type" value="html">HTML</label>
                 <label for="plain"><input type="radio" id="plain" name="format-type" value="plain">Plain Text</label>
                 <label for="comments">Other topics you'd like to hear about</label>
                 <textarea name="comments" id="comments" cols="35" rows="8" placeholder="Share your thoughts..."></textarea>
