@@ -104,12 +104,13 @@ select:focus {
     outline: none !important;
     background-color: #8447FF !important;
     color: #fff;
+    box-shadow: 0 0 4px 4px #222;
 }
 
 .contact-info,
 .newsletter {
     text-align: left;
-    background: #222;
+    background: rgba(34, 34, 34,.9);
     padding: 1rem;
     color: #fff;
 }
@@ -189,10 +190,12 @@ input[type="submit"] {
     transition-property: all;
     transition-duration: .3s;
 }
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    outline: none;
     cursor: pointer;
     background-color: #DB3069;
-    box-shadow: 0 0 10px 10px #222;
+    box-shadow: 0 0 8px 8px #222;
 }
 
 /*--- Media Query-------*/
